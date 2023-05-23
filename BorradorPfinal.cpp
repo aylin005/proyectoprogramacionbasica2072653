@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-//librería para aceptar caracteres en español
+//librerÃ­a para aceptar caracteres en espaÃ±ol
 #include <clocale>
 #include <conio.h>
 #include <string>
@@ -17,7 +17,7 @@ int guardado = 0;
 struct Alta
 {
 	int numero;
-	int año;
+	int aÃ±o;
 
 	string nombre;
 	string genero; 
@@ -46,10 +46,10 @@ int main()
 	do
 	{
 		printf("\t** TIENDA DE VIDEOJUEGOS **\n");
-		printf("\t*      MENÚ PRINCIPAL     *\n\n\n");
+		printf("\t*      MENÃš PRINCIPAL     *\n\n\n");
 
 		//Imprimir menu
-		printf("Ingrese el número de la opción deseada\n\n");
+		printf("Ingrese el nÃºmero de la opciÃ³n deseada\n\n");
 
 		printf("1. AGREGAR ARTICULO\n");
 		printf("2. MODIFICAR ARTICULO\n");
@@ -103,14 +103,14 @@ int main()
 	if (cantidadArticulos > 0)
 	{
 		articulosGuardados = cantidadArticulos;
-		printf("Registre el número de artículos que dará de alta \n");
+		printf("Registre el nÃºmero de artÃ­culos que darÃ¡ de alta \n");
 		scanf_s("%d", &cantidadArticulos);
 		int i = articulosGuardados;
 		cantidadArticulos = cantidadArticulos + articulosGuardados;
 
 		for (int i = articulosGuardados; i < cantidadArticulos; i++)
 		{
-			//Numero del artículo
+			//Numero del artÃ­culo
 			articulo[i].numero = i + 1;
 
 			//Nombre de videojuego
@@ -118,29 +118,29 @@ int main()
 			cin.ignore();
 			getline(cin, articulo[i].nombre);
 
-			//Año de lanzamiento
-			printf("Año de lanzamiento:\n");
-			scanf_s("%d", &articulo[i].año);
+			//AÃ±o de lanzamiento
+			printf("AÃ±o de lanzamiento:\n");
+			scanf_s("%d", &articulo[i].aÃ±o);
 
 			//Genero
-			printf("Género: \n");
+			printf("GÃ©nero: \n");
 			cin.ignore();
 			getline(cin, articulo[i].genero);
 
 			//Clasificacion
-			printf("Clasificación \n");
+			printf("ClasificaciÃ³n \n");
 			getline(cin, articulo[i].clasificacion);
 
 			//Consola
 			printf("Consola:\n");
 			getline(cin, articulo[i].consola);
 
-			//Características
-			printf("Características:\n");
+			//CaracterÃ­sticas
+			printf("CaracterÃ­sticas:\n");
 			getline(cin, articulo[i].caracteristicas);
 
 			//Descripcion
-			printf("Descripción:\n");
+			printf("DescripciÃ³n:\n");
 			getline(cin, articulo[i].descripcion);
 
 			//Precio unitario
@@ -157,11 +157,11 @@ int main()
 	}
 	else
 	{
-		printf("Registre el número de artículos que dará de alta \n");
+		printf("Registre el nÃºmero de artÃ­culos que darÃ¡ de alta \n");
 		scanf_s("%d", &cantidadArticulos);
 		for (int i = 0; i < cantidadArticulos; i++)
 		{
-			//Numero del artículo
+			//Numero del artÃ­culo
 			articulo[i].numero = i + 1;
 
 			//Nombre de videojuego
@@ -169,29 +169,29 @@ int main()
 			cin.ignore();
 			getline(cin, articulo[i].nombre);
 
-			//Año de lanzamiento
-			printf("Año de lanzamiento:\n");
-			scanf_s("%d", &articulo[i].año);
+			//AÃ±o de lanzamiento
+			printf("AÃ±o de lanzamiento:\n");
+			scanf_s("%d", &articulo[i].aÃ±o);
 
 			//Genero
-			printf("Género: \n");
+			printf("GÃ©nero: \n");
 			cin.ignore();
 			getline(cin, articulo[i].genero);
 
 			//Clasificacion
-			printf("Clasificación \n");
+			printf("ClasificaciÃ³n \n");
 			getline(cin, articulo[i].clasificacion);
 
 			//Consola
 			printf("Consola:\n");
 			getline(cin, articulo[i].consola);
 
-			//Características
-			printf("Características:\n");
+			//CaracterÃ­sticas
+			printf("CaracterÃ­sticas:\n");
 			getline(cin, articulo[i].caracteristicas);
 
 			//Descripcion
-			printf("Descripción:\n");
+			printf("DescripciÃ³n:\n");
 			getline(cin, articulo[i].descripcion);
 
 			//Precio unitario
@@ -215,10 +215,10 @@ Alta *articulo = nullptr;
 
 void alta2()
 {
-	printf("¿Cuántos artículos ingresará?\n");
+	printf("Â¿CuÃ¡ntos artÃ­culos ingresarÃ¡?\n");
 	scanf_s("%d", &cantidadArticulos);
 
-	//Si el arreglo está vacío
+	//Si el arreglo estÃ¡ vacÃ­o
 	if (articulo == nullptr)
 	{
 		//Se crea un arreglo de tipo Alta con la cantidad ingresada
@@ -232,29 +232,29 @@ void alta2()
 			cin.ignore();
 			getline(cin, articulo[i].nombre);
 
-			//Año de lanzamiento
-			printf("Año de lanzamiento:\n");
-			scanf_s("%d", &articulo[i].año);
+			//AÃ±o de lanzamiento
+			printf("AÃ±o de lanzamiento:\n");
+			scanf_s("%d", &articulo[i].aÃ±o);
 
 			//Genero
-			printf("Género: \n");
+			printf("GÃ©nero: \n");
 			cin.ignore();
 			getline(cin, articulo[i].genero);
 
 			//Clasificacion
-			printf("Clasificación \n");
+			printf("ClasificaciÃ³n \n");
 			getline(cin, articulo[i].clasificacion);
 
 			//Consola
 			printf("Consola:\n");
 			getline(cin, articulo[i].consola);
 
-			//Características
-			printf("Características:\n");
+			//CaracterÃ­sticas
+			printf("CaracterÃ­sticas:\n");
 			getline(cin, articulo[i].caracteristicas);
 
 			//Descripcion
-			printf("Descripción:\n");
+			printf("DescripciÃ³n:\n");
 			getline(cin, articulo[i].descripcion);
 
 			//Precio unitario
@@ -275,7 +275,7 @@ void alta2()
 		//calcular cuantos articulos ya hay guardados
 		articulosGuardados = sizeof(articulo) / sizeof(articulo[0]);
 
-		//Crear un nuevo arreglo temporal con tamaño de artículos anteriores más los nuevos
+		//Crear un nuevo arreglo temporal con tamaÃ±o de artÃ­culos anteriores mÃ¡s los nuevos
 		Alta *articuloTemp =new Alta [cantidadArticulos+articulosGuardados];
 
 		//Copiar los articulos anteriores
@@ -284,7 +284,7 @@ void alta2()
 			articuloTemp[i] = articulo[i];
 		}
 
-		//Añadir los nuevos datos
+		//AÃ±adir los nuevos datos
 		for (int i = articulosGuardados; i < cantidadArticulos+articulosGuardados; i++)
 		{
 			//Nombre de videojuego
@@ -292,29 +292,29 @@ void alta2()
 			cin.ignore();
 			getline(cin, articulo[i].nombre);
 
-			//Año de lanzamiento
-			printf("Año de lanzamiento:\n");
-			scanf_s("%d", &articulo[i].año);
+			//AÃ±o de lanzamiento
+			printf("AÃ±o de lanzamiento:\n");
+			scanf_s("%d", &articulo[i].aÃ±o);
 
 			//Genero
-			printf("Género: \n");
+			printf("GÃ©nero: \n");
 			cin.ignore();
 			getline(cin, articulo[i].genero);
 
 			//Clasificacion
-			printf("Clasificación \n");
+			printf("ClasificaciÃ³n \n");
 			getline(cin, articulo[i].clasificacion);
 
 			//Consola
 			printf("Consola:\n");
 			getline(cin, articulo[i].consola);
 
-			//Características
-			printf("Características:\n");
+			//CaracterÃ­sticas
+			printf("CaracterÃ­sticas:\n");
 			getline(cin, articulo[i].caracteristicas);
 
 			//Descripcion
-			printf("Descripción:\n");
+			printf("DescripciÃ³n:\n");
 			getline(cin, articulo[i].descripcion);
 
 			//Precio unitario
@@ -338,14 +338,14 @@ void lista()
 {
 	for (int i = 0; i < cantidadArticulos+articulosGuardados; i++)
 	{
-		printf("\n\nArtículo %d\n", i+1);
+		printf("\n\nArtÃ­culo %d\n", i+1);
 		printf("Nombre del videojuego: %s\n", articulo[i].nombre.c_str());
-		printf("Año de lanzamiento: %d\n", articulo[i].año);
-		printf("Género: %s\n", articulo[i].genero.c_str());
-		printf("Clasificación: %s\n", articulo[i].clasificacion.c_str());
+		printf("AÃ±o de lanzamiento: %d\n", articulo[i].aÃ±o);
+		printf("GÃ©nero: %s\n", articulo[i].genero.c_str());
+		printf("ClasificaciÃ³n: %s\n", articulo[i].clasificacion.c_str());
 		printf("Consola: %s\n", articulo[i].consola.c_str());
-		printf("Características: %s\n", articulo[i].caracteristicas.c_str());
-		printf("Descripción: %s\n", articulo[i].descripcion.c_str());
+		printf("CaracterÃ­sticas: %s\n", articulo[i].caracteristicas.c_str());
+		printf("DescripciÃ³n: %s\n", articulo[i].descripcion.c_str());
 		printf("Precio unitario: $%.6g\n", articulo[i].precio);
 		printf("El impuesto es de $%.6g\n", articulo[i].impuesto);
 		printf("El total es de $%.6g\n\n", articulo[i].total);
